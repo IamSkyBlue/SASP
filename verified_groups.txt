@@ -1,0 +1,11 @@
+存放規則:
+第一行放Line群組ID(group_id)
+第二行放google drive資料夾id
+注意:放置id的那排請不要加任何符號包含空格
+-
+LINE_GROUP_ID_HERE
+GOOGLE_DRIVE_FOLDER_ID_HERE
+-
+LINE_GROUP_ID_HERE
+GOOGLE_DRIVE_FOLDER_ID_HERE
+-
