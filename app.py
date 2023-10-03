@@ -22,6 +22,7 @@ from linebot.v3.webhooks import (
     ImageMessageContent,
     VideoMessageContent
 )
+from linebot.v3.messaging.models.reply_message_response import ReplyMessageResponse
 
 import tempfile
 import os
@@ -73,7 +74,8 @@ def handle_TextMessage(event):
         if event.message.text == "!getgid":
             line_bot_api = MessagingApi(api_client)
             msg = TextMessage(text=event.source.group_id)
-            line_bot_api.reply_message(event.reply_token, msg)
+            reply_message_request = ReplyMessageRequest(reply_token=event.reply_token, messages=[msg)
+            line_bot_api.reply_message(reply_message_request)
 
 def handle_blob(event,ext):
     with ApiClient(configuration) as api_client:
